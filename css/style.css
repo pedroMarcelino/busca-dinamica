@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding:0;
+    background-color:  #212121;
+    color: #cacaca;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 5%;
+}
+
+.btn-default{
+    color: #cacaca;
+    border-color: #cacaca;
+}
+
+.btn{
+    font-size: 19px;
+}
+
+.jumbotron h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.jumbotron h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+}
+
+#img-jumb{
+    background-image: linear-gradient(-90deg, rgb(97, 160, 241),  rgb(131, 0, 207));
+    color: #000000;
+}
+
+svg {
+    margin-top: -90px;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    background-image: linear-gradient(-90deg, rgb(97, 160, 241),  rgb(131, 0, 207));    
+}
+
+
+.alter-svg {
+    margin-top: -90px;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    background-image: linear-gradient(-90deg, rgb(191, 241, 97),  rgb(131, 0, 207));    
+    transform: rotate(20deg)
+}
+
+.ordem-span{
+    font-size: 5em;
+    color: rgb(169, 64, 230);
+}
+
+.linha {
+    background-image: linear-gradient(-90deg,rgb(131, 0, 207), rgb(97, 160, 241));
+    width: 30%;
+    padding: 3px; 
+    border-radius: 5px; 
+}
+
+.hover-divs:hover .linha{
+    width: 70%;
+    transition: 2.5s;
+}
+
+.explicativo{
+    font-size: 1.4em;
+}
+
+.importante{
+    color: #ff0000;
+}
+
+.center{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: #d1d0d0;
+}
+
+.edit-txtarea, input[type=text]{
+    background: transparent;
+    color: white;
+    font-size: 20px; 
+}
+
+.edit-txtarea:focus, input[type=text]:focus{
+    background: transparent;
+    color: white;
+    font-size: 20px; 
+}
+
+.btn-plus{
+    background: #10db3c;
+    border-radius: 5px; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btnsearch{
+    border-radius: 5px; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btn_limpar2{
+    border-radius: 5px; 
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn-trash{
+    background: #f12d2d;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+#_espc{
+    display: none !important;
+}
+
+#destino, #origem{
+    display: inline-block;
+    width: 100%;
+}
+
+.box{
+    width: 100%;
+    padding: 10px;
+    color: #cacaca;
+    border: 1px dotted #fff;
+    text-align: justify;
+}
+.highlight { 
+    background-color: rgb(172, 217, 246); 
+    color: #000000;
+    font-weight: bold; 
+}
+#btn-limpa-destino{
+    border-radius: 5px; 
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    background-color: #b63cee;
+}
+
+#edit-icon{
+    font-size: 16px;
+}
+

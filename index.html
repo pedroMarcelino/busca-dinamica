@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Busca dinâmica de palavras</title>
+    <!--BOOTSTRAP LINK-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <!--JQUERY BOOTSTRAP-->
+    <script src="https://cdn.ckeditor.com/4.11.4/standard-all/ckeditor.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/jquery.highlight-4.closure.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="scripts/jquery.highlight-4.closure.js" type="text/javascript"></script>
+  <script type="text/javascript" src="scripts/page.js"></script>
+
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Source+Sans+Pro" rel="stylesheet">
+    <!--icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="jumbotron" id="img-jumb">
+        <h2 class="display-4">Olá, Seja bem-vindo ao </h2>
+        <h1 class="display-1">Busca Inteligente</h1>
+    </div>
+
+    <svg viewbox="0 0 100 25">
+        <path fill="rgb(31, 34, 36)" d="M0 30 V12 Q30 17 55 12 T100 11 V30z" />
+    </svg>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 hover-divs">
+                <span class="ordem-span">
+                    1º
+                </span>
+                <div class="linha"></div>
+                <div class="explicativo">
+                    <p>Insira o conteúdo dentro da Caixa de Texto e clique em enviar!</p>
+                </div>
+            </div>
+            <div class="col-md-6 hover-divs">
+                <span class="ordem-span">
+                    2º
+                </span>
+                <div class="linha"></div>
+                <div class="explicativo">
+                    <p>Clique no botão verde (+ ADD) ele irá adicionar um novo campo de busca. Caso queira mais campos é só clicar mais vezes no botão verde(+ ADD).</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 hover-divs">
+                <span class="ordem-span">
+                    3º
+                </span>
+                <div class="linha"></div>
+                <div class="explicativo">
+                    <p>Depois de colocar as palavras que deseja filtrar é so ir no botão amarelo(Fazer Busca <i id="edit-icon" class="fas fa-search"></i>),
+                        e aparecerá as palavras em destaque que você pesquisou.
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 hover-divs">
+                <span class="ordem-span">
+                    4º
+                </span>
+                <div class="linha"></div>
+                <div class="explicativo">
+                    <p><span class="importante">(importante) </span>Se você excluir um item de busca e quiser que apareça o filtro sem aquele item, você deve 
+                    clicar no botão roxo(Limpar seleções no texto), e em seguida fazer uma nova busca no botão amarelo(Fazer Busca <i id="edit-icon" class="fas fa-search"></i>);</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="center">Insira seu texto aqui!</p>
+                <div class="form-group">
+                    <label for="comment"></label>
+                    <textarea class="form-control edit-txtarea" rows="8" id="txt_conteudo" placeholder="Digite ou coloque ele aqui"></textarea>
+                </div>
+                <div class="float-right">
+                    <button id="btn-limpar" class="btn btn-outline-primary">Limpar <i class="fas fa-broom"></i></button>
+                    <button id="btn-enviar" class="btn btn-outline-success">Enviar <i class="far fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p class="center">Hora de Filtrar!</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class=" btn btn-plus" id="add_espc"><i class="fas fa-plus"></i>ADD</button>
+                        <button id="btn_limpar2" class="btn btn-primary">Limpar </button>
+                        <div class="float-right">
+                            <button id="btnsearch" class="btn btn-warning">Fazer Busca <i class="fas fa-search"></i></button>
+                            <button id="btn-limpa-destino" class="btn">Limpar seleções no texto</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="group-inputs" class="row mt-3">
+                    <div id="_espc" class="col-md-4">
+                        <div class="row mt-3 mr-2">
+                            <div class="col-md-10">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Palavra de busca">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="remover_espc" class="btn btn-trash"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p class="center">O texto irá aparecer aqui!</p>
+                <div class="box">
+                    <div id="destino">Esperando texto...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
